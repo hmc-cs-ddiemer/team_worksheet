@@ -13,4 +13,5 @@ class TeamController < ApplicationController
   def user_basic_params
     params.permit(:name, :birth)
   end
+
 end
