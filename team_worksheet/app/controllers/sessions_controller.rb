@@ -18,6 +18,7 @@ class SessionsController < ApplicationController
   end
 
   def home
+    @user = User.new
   end
 
   def profile

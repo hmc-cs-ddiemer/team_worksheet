@@ -13,14 +13,6 @@ Rails.application.routes.draw do
 
   get 'team/index'
   root 'team#index'
-<<<<<<< HEAD
-
-  resources :team, only: :index do
-      post :create_basic
-  end
-
-  root to: 'team#index'
-=======
   match ':controller(/:action(/:id))(.:format)', via: [:get, :post]
   root :to => "sessions#login"
   match "signup", :to => "users#new", via: [:get, :post]
@@ -30,5 +22,5 @@ Rails.application.routes.draw do
   match "profile", :to => "sessions#profile", via: [:get, :post]
   match "setting", :to => "sessions#setting", via: [:get, :post]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
->>>>>>> origin/userlogin
+
 end

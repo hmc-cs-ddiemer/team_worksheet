@@ -1,9 +1,4 @@
 class User < ApplicationRecord
-<<<<<<< HEAD
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
-
-=======
   attr_accessor :password
     EMAIL_REGEX = /\A[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\z/i
     validates :username, :presence => true, :uniqueness => true, :length => { :in => 3..20 }
@@ -36,5 +31,4 @@ class User < ApplicationRecord
     def match_password(login_password="")
       encrypted_password == BCrypt::Engine.hash_secret(login_password, salt)
     end
->>>>>>> origin/userlogin
 end

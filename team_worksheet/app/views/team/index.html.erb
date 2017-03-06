@@ -23,17 +23,7 @@
 	            <!-- Collect the nav links, forms, and other content for toggling -->
 	            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	                <ul class="nav navbar-nav">
-	                    <li>
-                        <form>
-                            <%= simple_form_for @user_basic do |f| %>
-                            <%= f.input_field :name, label: 'give me number', as: :integer %>
-                            <%= f.input_field :poop, as: :integer %>
-                            <%= f.button :submit %>
-                            <% end %>
-                          <input name="name" type="hidden" value="0">
-                          <input name="poop" type="hidden" value="1">
-                        </form>
-                      </li>
+	                    
 	                </ul>
 	            </div>
 	            <!-- /.navbar-collapse -->
