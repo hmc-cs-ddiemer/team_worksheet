@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get 'team/index'
 
   get 'team/index'
-  root 'team#index'
+  root 'sessions#profile'
   match ':controller(/:action(/:id))(.:format)', via: [:get, :post]
   root :to => "sessions#login"
   match "signup", :to => "users#new", via: [:get, :post]

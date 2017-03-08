@@ -2,28 +2,41 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
 
 .navbar-header {
-	background-color: red;
+	background-color: salmon;
+	text-color: blue;
 
+
+}
+.navbar-brand{
+	text-color: red;
 }
 
 .navbar-fixed-top {
-	background-color: white;
+	background-color: salmon;
+	text-color: red;
 }
 
 .navbar-nav {
-	background-color: white;
+	background-color: salmon;
+	text-color: blue;
 }
 
 .collapse {
-	background-color: white;
+	background-color: salmon;
+	text-color: blue;
 }
 
 .navbar-collapse {
-	background-color: white;
+	background-color: salmon;
+	text-color: blue;
 }
 
 .navbar-header{
-	background-color: white;
+	background-color: salmon;
+	text-color: blue;
 }
