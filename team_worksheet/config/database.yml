@@ -14,7 +14,7 @@ default: &default
   encoding: utf8
   pool: 5
   username: root
-  password: daddaddad
+  password: dad
   socket: /tmp/mysql.sock
 
 development:
@@ -22,7 +22,7 @@ development:
   encoding: utf8
   pool: 5
   username: root
-  password: daddaddad
+  password: dad
   socket: /tmp/mysql.sock
   database: team_worksheet_development
 
@@ -34,7 +34,7 @@ test:
   encoding: utf8
   pool: 5
   username: root
-  password: daddaddad
+  password: dad
   socket: /tmp/mysql.sock
   database: team_worksheet_test
 
