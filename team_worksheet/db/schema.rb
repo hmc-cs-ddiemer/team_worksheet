@@ -12,16 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20170225040407) do
 
-  create_table "USER", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "name",  limit: 20
-    t.date   "birth"
-  end
-
-  create_table "testUSER", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string  "name",    limit: 20
-    t.integer "scoreC1"
-  end
-
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "username"
     t.string   "email"

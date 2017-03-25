@@ -9,8 +9,6 @@
 .navbar-header {
 	background-color: salmon;
 	text-color: blue;
-
-
 }
 .navbar-brand{
 	text-color: red;
@@ -39,4 +37,16 @@
 .navbar-header{
 	background-color: salmon;
 	text-color: blue;
+}
+.navbar-inverse .navbar-nav > li > a {
+    color: white;
+}
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: black;
+}
+.navbar-inverse .navbar-brand {
+    color: white;
+}
+.navbar-inverse .navbar-brand:hover {
+    color: black;
 }
