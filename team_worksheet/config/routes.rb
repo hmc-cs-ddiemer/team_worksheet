@@ -12,6 +12,10 @@ Rails.application.routes.draw do
   get 'team/index'
 
   get 'team/index'
+
+  get 'graph/index'
+  get 'graph/data', :defaults => { :format => 'json'}
+
   root 'sessions#profile'
   match ':controller(/:action(/:id))(.:format)', via: [:get, :post]
   root :to => "sessions#login"
