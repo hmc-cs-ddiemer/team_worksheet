@@ -57,14 +57,28 @@
           <div id="worksheet">
                 <%= simple_form_for @user, url: profile_url(@user), html: { method: :post} do |f| %>
                 <h1>
-                  Enter your favorite number:
+                  1. During team meetings, I usually:
                 </h1>
-                <%= f.input_field :username, as: :integer %>
+                <%= f.input :C1, collection: 1...5, label: "a. provide the team with technical data or information.   ", as: :select %>
+                <%= f.input :C1, collection: 1...5, label: "b. keep the team focused on our mission or goal.   ", as: :select %>
+                <%= f.input :C3, collection: 1...5, label: "c. make sure everyone is involved in the discussion.   ", as: :select %>
+                <%= f.input :C4, collection: 1...5, label: "d. raise questions about our goals or methods.   ", as: :select %>
                 <br>
                 <h1>
-                  Enter your least favorite number:
+                  2. In relating to the team leader, I:
                 </h1>
-                <%= f.input_field :salt, as: :integer %>
+                <%= f.input :C1, collection: 1...5, label: "a. suggest that our work be goal directed.", as: :radio_buttons, item_label_class: "radio-inline", item_wrapper_tag: false %>
+                <%= f.input :C1, collection: 1...5, label: "b. try to help him or her build a positive team climate.", as: :radio_buttons, item_label_class: "radio-inline", item_wrapper_tag: false %>
+                <%= f.input :C1, collection: 1...5, label: "c. am willing to disagree with him or her when necessary.", as: :radio_buttons, item_label_class: "radio-inline", item_wrapper_tag: false %>
+                <%= f.input :C4, collection: 1...5, label: "d. offer advice based upon my area of expertise.", as: :radio_buttons, item_label_class: "radio-inline", item_wrapper_tag: false %>
+                <br>
+                <h1>
+                  3. Under stress, I sometimes:
+                </h1>
+                <%= f.input :C1, collection: 1...5, label: "a. overuse humor and other tension-reducing devices.", as: :radio_buttons, item_label_class: "radio-inline", item_wrapper_tag: false %>
+                <%= f.input :C2, collection: 1...5, label: "b. am too direct in communicating with other team members.", as: :radio_buttons, item_label_class: "radio-inline", item_wrapper_tag: false %>
+                <%= f.input :C3, collection: 1...5, label: "c. lose patience with the need to get involved in discussions.", as: :radio_buttons, item_label_class: "radio-inline", item_wrapper_tag: false %>
+                <%= f.input :C4, collection: 1...5, label: "d. complain to outsiders about problems facing the team.", as: :radio_buttons, item_label_class: "radio-inline", item_wrapper_tag: false %>
                 <br>
                 <%= f.button :submit, 'farts', url: sessions_home_url %>
                 <% end %>

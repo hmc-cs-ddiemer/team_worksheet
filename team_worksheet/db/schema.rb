@@ -10,7 +10,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170225040407) do
+ActiveRecord::Schema.define(version: 20170325030200) do
+
+  create_table "forms", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "Q1"
+    t.string   "Q2"
+    t.string   "Q3"
+    t.string   "Q4"
+    t.string   "Q5"
+    t.string   "Q6"
+    t.string   "Q7"
+    t.string   "Q8"
+    t.string   "Q9"
+    t.string   "Q10"
+    t.string   "Q11"
+    t.string   "Q12"
+    t.string   "Q13"
+    t.string   "Q14"
+    t.string   "Q15"
+    t.string   "Q16"
+    t.string   "Q17"
+    t.string   "Q18"
+  end
+
+  create_table "teams", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "s1"
+    t.string   "s2"
+    t.string   "s3"
+    t.string   "s4"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "teamname"
+  end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "username"
@@ -19,6 +52,10 @@ ActiveRecord::Schema.define(version: 20170225040407) do
     t.string   "salt"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+    t.integer  "C1"
+    t.integer  "C2"
+    t.integer  "C3"
+    t.integer  "C4"
   end
 
 end
