@@ -8,7 +8,7 @@
     $connection = mysql_select_db($database, $server);
 
     $myquery = "
-    SELECT  FROM 
+    SELECT  FROM
     ";
 
     $query = mysql_query($myquery);
