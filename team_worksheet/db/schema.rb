@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170405110348) do
+ActiveRecord::Schema.define(version: 20170405220917) do
 
   create_table "forms", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.datetime "created_at", null: false
@@ -51,85 +51,85 @@ ActiveRecord::Schema.define(version: 20170405110348) do
     t.string   "email"
     t.string   "encrypted_password"
     t.string   "salt"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.integer  "C1"
-    t.integer  "C2"
-    t.integer  "C3"
-    t.integer  "C4"
-    t.integer  "Q1_1"
-    t.integer  "Q1_2"
-    t.integer  "Q1_3"
-    t.integer  "Q1_4"
-    t.integer  "Q2_1"
-    t.integer  "Q2_2"
-    t.integer  "Q2_3"
-    t.integer  "Q2_4"
-    t.integer  "Q3_1"
-    t.integer  "Q3_2"
-    t.integer  "Q3_3"
-    t.integer  "Q3_4"
-    t.integer  "Q4_1"
-    t.integer  "Q4_2"
-    t.integer  "Q4_3"
-    t.integer  "Q4_4"
-    t.integer  "Q5_1"
-    t.integer  "Q5_2"
-    t.integer  "Q5_3"
-    t.integer  "Q5_4"
-    t.integer  "Q6_1"
-    t.integer  "Q6_2"
-    t.integer  "Q6_3"
-    t.integer  "Q6_4"
-    t.integer  "Q7_1"
-    t.integer  "Q7_2"
-    t.integer  "Q7_3"
-    t.integer  "Q7_4"
-    t.integer  "Q8_1"
-    t.integer  "Q8_2"
-    t.integer  "Q8_3"
-    t.integer  "Q8_4"
-    t.integer  "Q9_1"
-    t.integer  "Q9_2"
-    t.integer  "Q9_3"
-    t.integer  "Q9_4"
-    t.integer  "Q10_1"
-    t.integer  "Q10_2"
-    t.integer  "Q10_3"
-    t.integer  "Q10_4"
-    t.integer  "Q11_1"
-    t.integer  "Q11_2"
-    t.integer  "Q11_3"
-    t.integer  "Q11_4"
-    t.integer  "Q12_1"
-    t.integer  "Q12_2"
-    t.integer  "Q12_3"
-    t.integer  "Q12_4"
-    t.integer  "Q13_1"
-    t.integer  "Q13_2"
-    t.integer  "Q13_3"
-    t.integer  "Q13_4"
-    t.integer  "Q14_1"
-    t.integer  "Q14_2"
-    t.integer  "Q14_3"
-    t.integer  "Q14_4"
-    t.integer  "Q15_1"
-    t.integer  "Q15_2"
-    t.integer  "Q15_3"
-    t.integer  "Q15_4"
-    t.integer  "Q16_1"
-    t.integer  "Q16_2"
-    t.integer  "Q16_3"
-    t.integer  "Q16_4"
-    t.integer  "Q17_1"
-    t.integer  "Q17_2"
-    t.integer  "Q17_3"
-    t.integer  "Q17_4"
-    t.integer  "Q18_1"
-    t.integer  "Q18_2"
-    t.integer  "Q18_3"
-    t.integer  "Q18_4"
-    t.string   "teamname"
+    t.datetime "created_at",                                       null: false
+    t.datetime "updated_at",                                       null: false
+    t.integer  "C1",                 default: 0,                   null: false
+    t.integer  "C2",                 default: 0,                   null: false
+    t.integer  "C3",                 default: 0,                   null: false
+    t.integer  "C4",                 default: 0,                   null: false
+    t.integer  "Q1_1",               default: 0,                   null: false
+    t.integer  "Q1_2",               default: 0,                   null: false
+    t.integer  "Q1_3",               default: 0,                   null: false
+    t.integer  "Q1_4",               default: 0,                   null: false
+    t.integer  "Q2_1",               default: 0,                   null: false
+    t.integer  "Q2_2",               default: 0,                   null: false
+    t.integer  "Q2_3",               default: 0,                   null: false
+    t.integer  "Q2_4",               default: 0,                   null: false
+    t.integer  "Q3_1",               default: 0,                   null: false
+    t.integer  "Q3_2",               default: 0,                   null: false
+    t.integer  "Q3_3",               default: 0,                   null: false
+    t.integer  "Q3_4",               default: 0,                   null: false
+    t.integer  "Q4_1",               default: 0,                   null: false
+    t.integer  "Q4_2",               default: 0,                   null: false
+    t.integer  "Q4_3",               default: 0,                   null: false
+    t.integer  "Q4_4",               default: 0,                   null: false
+    t.integer  "Q5_1",               default: 0,                   null: false
+    t.integer  "Q5_2",               default: 0,                   null: false
+    t.integer  "Q5_3",               default: 0,                   null: false
+    t.integer  "Q5_4",               default: 0,                   null: false
+    t.integer  "Q6_1",               default: 0,                   null: false
+    t.integer  "Q6_2",               default: 0,                   null: false
+    t.integer  "Q6_3",               default: 0,                   null: false
+    t.integer  "Q6_4",               default: 0,                   null: false
+    t.integer  "Q7_1",               default: 0,                   null: false
+    t.integer  "Q7_2",               default: 0,                   null: false
+    t.integer  "Q7_3",               default: 0,                   null: false
+    t.integer  "Q7_4",               default: 0,                   null: false
+    t.integer  "Q8_1",               default: 0,                   null: false
+    t.integer  "Q8_2",               default: 0,                   null: false
+    t.integer  "Q8_3",               default: 0,                   null: false
+    t.integer  "Q8_4",               default: 0,                   null: false
+    t.integer  "Q9_1",               default: 0,                   null: false
+    t.integer  "Q9_2",               default: 0,                   null: false
+    t.integer  "Q9_3",               default: 0,                   null: false
+    t.integer  "Q9_4",               default: 0,                   null: false
+    t.integer  "Q10_1",              default: 0,                   null: false
+    t.integer  "Q10_2",              default: 0,                   null: false
+    t.integer  "Q10_3",              default: 0,                   null: false
+    t.integer  "Q10_4",              default: 0,                   null: false
+    t.integer  "Q11_1",              default: 0,                   null: false
+    t.integer  "Q11_2",              default: 0,                   null: false
+    t.integer  "Q11_3",              default: 0,                   null: false
+    t.integer  "Q11_4",              default: 0,                   null: false
+    t.integer  "Q12_1",              default: 0,                   null: false
+    t.integer  "Q12_2",              default: 0,                   null: false
+    t.integer  "Q12_3",              default: 0,                   null: false
+    t.integer  "Q12_4",              default: 0,                   null: false
+    t.integer  "Q13_1",              default: 0,                   null: false
+    t.integer  "Q13_2",              default: 0,                   null: false
+    t.integer  "Q13_3",              default: 0,                   null: false
+    t.integer  "Q13_4",              default: 0,                   null: false
+    t.integer  "Q14_1",              default: 0,                   null: false
+    t.integer  "Q14_2",              default: 0,                   null: false
+    t.integer  "Q14_3",              default: 0,                   null: false
+    t.integer  "Q14_4",              default: 0,                   null: false
+    t.integer  "Q15_1",              default: 0,                   null: false
+    t.integer  "Q15_2",              default: 0,                   null: false
+    t.integer  "Q15_3",              default: 0,                   null: false
+    t.integer  "Q15_4",              default: 0,                   null: false
+    t.integer  "Q16_1",              default: 0,                   null: false
+    t.integer  "Q16_2",              default: 0,                   null: false
+    t.integer  "Q16_3",              default: 0,                   null: false
+    t.integer  "Q16_4",              default: 0,                   null: false
+    t.integer  "Q17_1",              default: 0,                   null: false
+    t.integer  "Q17_2",              default: 0,                   null: false
+    t.integer  "Q17_3",              default: 0,                   null: false
+    t.integer  "Q17_4",              default: 0,                   null: false
+    t.integer  "Q18_1",              default: 0,                   null: false
+    t.integer  "Q18_2",              default: 0,                   null: false
+    t.integer  "Q18_3",              default: 0,                   null: false
+    t.integer  "Q18_4",              default: 0,                   null: false
+    t.string   "teamname",           default: "Aint no team here", null: false
   end
 
 end

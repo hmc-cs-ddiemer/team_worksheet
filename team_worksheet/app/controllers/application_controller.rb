@@ -5,7 +5,6 @@ class ApplicationController < ActionController::Base
     if session[:user_id]
       # set current user object to @current_user object variable
       @current_user = User.find session[:user_id]
-      @current_user_teamname = User.find session[:teamname]
       return true
     else
       redirect_to(:controller => 'sessions', :action => 'login')
