@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170403213244) do
+ActiveRecord::Schema.define(version: 20170405110348) do
 
-  create_table "forms", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "forms", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "Q1"
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 20170403213244) do
     t.string   "userId"
   end
 
-  create_table "teams", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "teams", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "s1"
     t.string   "s2"
     t.string   "s3"
@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 20170403213244) do
     t.string   "teamname"
   end
 
-  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "username"
     t.string   "email"
     t.string   "encrypted_password"
@@ -129,6 +129,7 @@ ActiveRecord::Schema.define(version: 20170403213244) do
     t.integer  "Q18_2"
     t.integer  "Q18_3"
     t.integer  "Q18_4"
+    t.string   "teamname"
   end
 
 end

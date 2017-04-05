@@ -7,40 +7,62 @@
 </head>
 <body>
 <!-- Navigation -->
-	    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-	        <div class="container">
-	            <!-- Brand and toggle get grouped for better mobile display -->
-	            <div class="navbar-header">
-	                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-	                    <span class="sr-only">Toggle navigation</span>
-	                    <span class="icon-bar"></span>
-	                    <span class="icon-bar"></span>
-	                    <span class="icon-bar"></span>
-	                </button>
-
-	                <%= link_to "Team Worksheet", root_url, class: "navbar-brand" %>
-	            </div>
-	            <!-- Collect the nav links, forms, and other content for toggling -->
-	            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	                <ul class="nav navbar-nav">
-	                    
-	                </ul>
-	            </div>
-	            <!-- /.navbar-collapse -->
-	        </div>
-	        <!-- /.container -->
-	    </nav>
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+          <div class="container">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                   <span class="sr-only">Toggle navigation</span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                </button>
+                <%= link_to "Profile", root_url, class: "navbar-brand" %>
+              </div>
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav">
+                    <li>
+                      <%= link_to "Worksheet", sessions_home_url, class: "navbar-brand"%>
+                    </li>
+                    <li>
+                      <%= link_to "Team", team_index_url, class: "navbar-brand" %>
+                    </li>
+                    <% if @current_user %>
+                    <li>
+                      <%= link_to "Logout", logout_path, method: :post, data: {confirm: "Are you sure you want to do something like that? Just up and LEAVE?"} %>
+                    </li>
+                    <% else %>
+                    <li>
+                      <%=link_to "Login", sessions_login_url %>
+                    </li>
+                    <li>
+                      <%= link_to "Register", users_new_url %>
+                    </li>
+                    <% end %>
+                  </ul>
+              </div>
+              <!-- /.navbar-collapse -->
+          </div>
+          <!-- /.container -->
+      </nav>
 
 	    <!-- Page Content -->
-	    <div class="container">
+      <!-- Page Content -->
+      <div class="container">
 
-	    	<div class="row">
-		    	<div class="col-lg-12 text-center">
-		    	</div>
-	    	</div>
-	    	<!-- /.row -->
-	    </div>
-	    <!-- /.container -->
-	  <style>body{padding-top:70px;}</style>
-	</body>
+        <div class="row">
+          <% if @current_user_teamname %>
+          <h1 class='Team_Header'> Your team name is: <%=@current_user_teamname%> </h1>
+          <% else %>
+          <h1 class='Team_Header'> ain't got no team </h1>
+          <div class="col-lg-12 text-center">
+            <%= yield %>
+          </div>
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    <style>body{padding-top:70px;}</style>
+  </body>
 	</html>
