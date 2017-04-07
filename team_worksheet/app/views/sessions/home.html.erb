@@ -55,10 +55,20 @@
 
 	    	<div class="row">
           <div id="worksheet">
-                <%= simple_form_for @user, url: :profile, html: { method: :post} do |f| %>
+                <%= simple_form_for @current_user, url: :profile, name: "authenticity_token:" ,html: { method: :post} do |f| %>
                 <h1>
                   1. During team meetings, I usually:
                 </h1>
+                <% if @current_user.Q1_1 == @current_user.Q1_2 || @current_user.Q1_1 == @current_user.Q1_3 || @current_user.Q1_1 == @current_user.Q1_4 || @current_user.Q1_2 == @current_user.Q1_3 || @current_user.Q1_2 == @current_user.Q1_4 || @current_user.Q1_3 == @current_user.Q1_4%>
+                  <div class= "incorrectInfo">
+                      Please correct conflicting rankings
+                  </div>
+
+                <% end %>
+                <br>
+                <h1 class='User_Header'> Data Validation: <%= @user.Q1_1 %> </h1>
+
+                <br>
                 <%= f.input :Q1_1, collection: 1...5, label: "a. provide the team with technical data or information.", as: :select %>
                 <%= f.input :Q1_2, collection: 1...5, label: "b. keep the team focused on our mission or goal.", as: :select %>
                 <%= f.input :Q1_3, collection: 1...5, label: "c. make sure everyone is involved in the discussion.", as: :select %>
@@ -67,6 +77,8 @@
                 <h1>
                   2. In relating to the team leader, I:
                 </h1>
+                <div class= "incorrectInfo">
+                </div>
                 <%= f.input :Q2_1, collection: 1...5, label: "a. suggest that our work be goal directed.", as: :select %>
                 <%= f.input :Q2_2, collection: 1...5, label: "b. try to help him or her build a positive team climate. ", as: :select %>
                 <%= f.input :Q2_3, collection: 1...5, label: "c. am willing to disagree with him or her when necessary. ", as: :select %>
@@ -75,17 +87,16 @@
                 <h1>
                   3. Under stress, I sometimes:
                 </h1>
+                <div class= "incorrectInfo">
+                </div>
                 <%= f.input :Q3_1, collection: 1...5, label: "a. overuse humor and other tension-reducing devices.", as: :select %>
                 <%= f.input :Q3_2, collection: 1...5, label: "b. am too direct in communicating with other team members.", as: :select %>
                 <%= f.input :Q3_3, collection: 1...5, label: "c. lose patience with the need to get involved in discussions.", as: :select %>
                 <%= f.input :Q3_4, collection: 1...5, label: "d. complain to outsiders about problems facing the team.", as: :select %>
                 <br>
-                <div class="form-group">
                   <div class="col-sm-offset-5 col-sm-10">
-                      <%= f.button :submit, value: 'Submit', :url=> sessions_profile_url, class: "btn btn-primary" do %>
-                      <%end%>
+                      <%= f.button :submit, value: 'Submit', :url=> sessions_profile_url, :data => {:disable_with => "Elves are Working..."} %>
                   </div>
-                </div>
                 <% end %>
               <input name="username" type="hidden" value="0">
               <input name="salt" type="hidden" value="0">
