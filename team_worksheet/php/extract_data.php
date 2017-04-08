@@ -8,7 +8,7 @@
     $connection = mysql_select_db($database, $server);
 
     $myquery = "
-    SELECT  FROM
+    SELECT 'c1', 'c2', 'c3', 'c4' FROM 'users'
     ";
 
     $query = mysql_query($myquery);
