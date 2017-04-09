@@ -55,7 +55,7 @@
 
 	    	<div class="row">
           <div id="worksheet">
-                <%= simple_form_for @current_user, url: :profile, name: "authenticity_token:" ,html: { method: :post} do |f| %>
+                <%= simple_form_for @current_user, url: {action: "load"}, html: { method: :post} do |f| %>
                 <h1>
                   1. During team meetings, I usually:
                 </h1>
@@ -66,7 +66,7 @@
 
                 <% end %>
                 <br>
-                <h1 class='User_Header'> Data Validation: <%= @user.Q1_1 %> </h1>
+                <h1 class='User_Header'> Data Validation: <%= @current_user.Q1_1 %> </h1>
 
                 <br>
                 <%= f.input :Q1_1, collection: 1...5, label: "a. provide the team with technical data or information.", as: :select %>
