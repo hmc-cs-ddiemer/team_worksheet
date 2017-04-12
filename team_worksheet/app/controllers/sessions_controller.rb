@@ -21,15 +21,7 @@ class SessionsController < ApplicationController
     @user = @current_user
   end
 
-  def update
-      @user = User.new(formParams)
-      @user.save
-      redirect_to(:controller => 'sessions', :action => 'home')
-  end
-
-  def formParams
-    params.require(:user).permit(:Q1_1, :Q1_2, :Q1_3, :Q1_4)
-  end
+  
 
   def profile
   end

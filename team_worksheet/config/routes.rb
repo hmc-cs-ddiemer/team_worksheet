@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   get 'users/new'
 
+  get '/sessions/update', to: 'sessions#update'
+
   get 'team/index'
 
   get 'team/index'
@@ -21,6 +23,7 @@ Rails.application.routes.draw do
   match "home", :to => "sessions#home", via: [:get, :post]
   match "profile", :to => "sessions#profile", via: [:get, :post]
   match "setting", :to => "sessions#setting", via: [:get, :post]
+  resources :users, :only => [:new, :update]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
 end

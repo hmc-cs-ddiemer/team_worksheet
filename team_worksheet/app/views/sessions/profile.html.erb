@@ -9,6 +9,9 @@
   </head>
   <%= yield %>
   <body>
+    <% if $proper == true%>
+      <% redirect_to(:controller => 'sessions', :action => 'home') %>
+    <% end %>
   <!-- Navigation -->
   	    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   	        <div class="container">

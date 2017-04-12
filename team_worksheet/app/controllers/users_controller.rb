@@ -14,6 +14,25 @@ class UsersController < ApplicationController
     end
     render "new"
   end
+
+  def update
+      @user = User.find(params[:id])
+      @user.update(formParams)
+      @user.save
+      if $proper == true
+        puts "***********************************************"
+        redirect_to(:controller => 'sessions', :action => 'profile')
+      else
+        puts "++++++++++++++++++++++++++++++++++++++++++++++++"
+        redirect_to(:controller => 'sessions', :action => 'home')
+      end
+
+  end
+
+  def formParams
+    params.require(:user).permit(:Q1_1, :Q1_2, :Q1_3, :Q1_4)
+  end
+
   def user_params
     params.require(:user).permit(:username, :email, :password, :password_confirmation)
   end
