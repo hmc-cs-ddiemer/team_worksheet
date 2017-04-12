@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
-  before_filter :authenticate_user, :only => [:home, :profile, :setting, :new, :load]
-  before_filter :save_login_state, :only => [:login, :login_attempt, :new, :load]
+  before_filter :authenticate_user, :only => [:home, :profile, :setting, :update]
+  before_filter :save_login_state, :only => [:login, :login_attempt, :update]
   def login
     #Login Form
   end
@@ -17,22 +17,18 @@ class SessionsController < ApplicationController
     end
   end
 
-  def new
-    @current_user = User.new
+  def home
+    @user = @current_user
   end
 
-  def load
-    authenticate_user
-    @current_user = User.new(formParams)
-    redirect_to(:controller => 'sessions', :action => 'home')
+  def update
+      @user = User.new(formParams)
+      @user.save
+      redirect_to(:controller => 'sessions', :action => 'home')
   end
 
   def formParams
-    params.require(@current_user).permit( :user => [:Q1_1, :Q1_2, :Q1_3, :Q1_4])
-  end
-
-  def home
-    @user = User.new
+    params.require(:user).permit(:Q1_1, :Q1_2, :Q1_3, :Q1_4)
   end
 
   def profile
