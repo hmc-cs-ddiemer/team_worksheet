@@ -11,8 +11,6 @@ $.ajax({
 });
 
 function draw(data) {
-  var chartdata = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120,
-      135, 150, 165, 180, 200, 220, 240, 270, 300, 330, 370, 410];
 
   var margin = {top: 30, right: 10, bottom: 30, left: 50}
 
@@ -24,15 +22,15 @@ function draw(data) {
   var dynamicColor;
 
   var yScale = d3.scale.linear()
-      .domain([0, d3.max(chartdata)])
+      .domain([0, d3.max(data)])
       .range([0, height])
 
   var xScale = d3.scale.ordinal()
-      .domain(d3.range(0, chartdata.length))
+      .domain(d3.range(0, data.length))
       .rangeBands([0, width])
 
   var colors = d3.scale.linear()
-      .domain([0, chartdata.length * .33, chartdata.length * .66, chartdata.length])
+      .domain([0, data.length * .33, data.length * .66, data.length])
       .range(['#d6e9c6', '#bce8f1', '#faebcc', '#ebccd1'])
 
   var awesome = d3.select('#bar-chart').append('svg')
@@ -41,7 +39,7 @@ function draw(data) {
       .style('background', '#bce8f1')
       .append('g')
       .attr('transform', 'translate(' + margin.left + ', ' + margin.top + ')')
-      .selectAll('rect').data(chartdata)
+      .selectAll('rect').data(data)
       .enter().append('rect')
       .style({
           'fill': function (data, i) {
@@ -79,7 +77,7 @@ function draw(data) {
       .ease('elastic')
 
   var verticalGuideScale = d3.scale.linear()
-      .domain([0, d3.max(chartdata)])
+      .domain([0, d3.max(data)])
       .range([height, 0])
 
   var vAxis = d3.svg.axis()
@@ -98,7 +96,7 @@ function draw(data) {
   var hAxis = d3.svg.axis()
       .scale(xScale)
       .orient('bottom')
-      .ticks(chartdata.size)
+      .ticks(data.size)
 
   var horizontalGuide = d3.select('svg').append('g')
   hAxis(horizontalGuide)
