@@ -105,6 +105,258 @@
                 <%= f.input :Q3_3, collection: 1...5, label: "c. lose patience with the need to get involved in discussions.", as: :select %>
                 <%= f.input :Q3_4, collection: 1...5, label: "d. complain to outsiders about problems facing the team.", as: :select %>
                 <br>
+                <h1>
+                  4. When conflicts arise on the team, I usually:
+                </h1>
+                <% if @current_user.Q4_1 == @current_user.Q4_2 || @current_user.Q4_1 == @current_user.Q4_3 || @current_user.Q4_1 == @current_user.Q4_4 || @current_user.Q4_2 == @current_user.Q4_3 || @current_user.Q4_2 == @current_user.Q4_4 || @current_user.Q4_3 == @current_user.Q4_4%>
+                  <div class= "incorrectInfo">
+                      Please correct conflicting rankings
+                      <% $proper = false %>
+                  </div>
+
+                <% end %>
+                <br>
+                <%= f.input :Q4_1, collection: 1...5, label: "a. press for an honest discussion of the differences.", as: :select %>
+                <%= f.input :Q4_2, collection: 1...5, label: "b. provide reasons why one side or the other is correct.", as: :select %>
+                <%= f.input :Q4_3, collection: 1...5, label: "c. see the differences as a basis for a possible change in team direction.", as: :select %>
+                <%= f.input :Q4_4, collection: 1...5, label: "d. try to break the tension with a supportive or humorous remark.", as: :select %>
+                <br>
+                <h1>
+                  5. Other team members usually see me as:
+                </h1>
+                <% if @current_user.Q5_1 == @current_user.Q5_2 || @current_user.Q5_1 == @current_user.Q5_3 || @current_user.Q5_1 == @current_user.Q5_4 || @current_user.Q5_2 == @current_user.Q5_3 || @current_user.Q5_2 == @current_user.Q5_4 || @current_user.Q5_3 == @current_user.Q5_4%>
+                  <div class= "incorrectInfo">
+                      Please correct conflicting rankings
+                      <% $proper = false %>
+                  </div>
+
+                <% end %>
+                <br>
+                <%= f.input :Q5_1, collection: 1...5, label: "a. factual.", as: :select %>
+                <%= f.input :Q5_2, collection: 1...5, label: "b. flexible.", as: :select %>
+                <%= f.input :Q5_3, collection: 1...5, label: "c. encouraging.", as: :select %>
+                <%= f.input :Q5_4, collection: 1...5, label: "d. candid.", as: :select %>
+                <br>
+                <h1>
+                  6. At times, I am:
+                </h1>
+                <% if @current_user.Q6_1 == @current_user.Q6_2 || @current_user.Q6_1 == @current_user.Q6_3 || @current_user.Q6_1 == @current_user.Q6_4 || @current_user.Q6_2 == @current_user.Q6_3 || @current_user.Q6_2 == @current_user.Q6_4 || @current_user.Q6_3 == @current_user.Q6_4%>
+                  <div class= "incorrectInfo">
+                      Please correct conflicting rankings
+                      <% $proper = false %>
+                  </div>
+
+                <% end %>
+                <br>
+                <%= f.input :Q6_1, collection: 1...5, label: "a. too results oriented.", as: :select %>
+                <%= f.input :Q6_2, collection: 1...5, label: "b. too laid-back.", as: :select %>
+                <%= f.input :Q6_3, collection: 1...5, label: "c. self-righteous.", as: :select %>
+                <%= f.input :Q6_4, collection: 1...5, label: "d. shortsighted.", as: :select %>
+                <br>
+
+                <h1>
+                  7. When things go wrong on the team, I usually:
+                </h1>
+                <% if @current_user.Q7_1 == @current_user.Q7_2 || @current_user.Q7_1 == @current_user.Q7_3 || @current_user.Q7_1 == @current_user.Q7_4 || @current_user.Q7_2 == @current_user.Q7_3 || @current_user.Q7_2 == @current_user.Q7_4 || @current_user.Q7_3 == @current_user.Q7_4%>
+                  <div class= "incorrectInfo">
+                      Please correct conflicting rankings
+                      <% $proper = false %>
+                  </div>
+
+                <% end %>
+                <br>
+                <%= f.input :Q7_1, collection: 1...5, label: "a. push for increased emphasis on listening, feedback, and participation.", as: :select %>
+                <%= f.input :Q7_2, collection: 1...5, label: "b. press for a candid discussion of our problems.", as: :select %>
+                <%= f.input :Q7_3, collection: 1...5, label: "c. work hard to provide more and better information.", as: :select %>
+                <%= f.input :Q7_4, collection: 1...5, label: "d. suggest that we revisit out basic mission.", as: :select %>
+                <br>
+
+                <h1>
+                  8. A risky team contribution for me is to:
+                </h1>
+                <% if @current_user.Q8_1 == @current_user.Q8_2 || @current_user.Q8_1 == @current_user.Q8_3 || @current_user.Q8_1 == @current_user.Q8_4 || @current_user.Q8_2 == @current_user.Q8_3 || @current_user.Q8_2 == @current_user.Q8_4 || @current_user.Q8_3 == @current_user.Q8_4%>
+                  <div class= "incorrectInfo">
+                      Please correct conflicting rankings
+                      <% $proper = false %>
+                  </div>
+
+                <% end %>
+                <br>
+                <%= f.input :Q8_1, collection: 1...5, label: "a. question some aspect of the team’s work.", as: :select %>
+                <%= f.input :Q8_2, collection: 1...5, label: "b. push the team to set higher performance standards.", as: :select %>
+                <%= f.input :Q8_3, collection: 1...5, label: "c. work outside my defined role or job area.", as: :select %>
+                <%= f.input :Q8_4, collection: 1...5, label: "d. provide other team members with feedback on their behavior as team members.", as: :select %>
+                <br>
+
+                <h1>
+                  9. Sometimes other team members see me as:
+                </h1>
+                <% if @current_user.Q9_1 == @current_user.Q9_2 || @current_user.Q9_1 == @current_user.Q9_3 || @current_user.Q9_1 == @current_user.Q9_4 || @current_user.Q9_2 == @current_user.Q9_3 || @current_user.Q9_2 == @current_user.Q9_4 || @current_user.Q9_3 == @current_user.Q9_4%>
+                  <div class= "incorrectInfo">
+                      Please correct conflicting rankings
+                      <% $proper = false %>
+                  </div>
+
+                <% end %>
+                <br>
+                <%= f.input :Q9_1, collection: 1...5, label: "a. a perfectionist.", as: :select %>
+                <%= f.input :Q9_2, collection: 1...5, label: "b. unwilling to reassess the team’s mission or goals.", as: :select %>
+                <%= f.input :Q9_3, collection: 1...5, label: "c. not serious about getting the real job done.", as: :select %>
+                <%= f.input :Q9_4, collection: 1...5, label: "d. a nitpicker.", as: :select %>
+                <br>
+
+                <h1>
+                  10. I believe team problem solving requires:
+                </h1>
+                <% if @current_user.Q10_1 == @current_user.Q10_2 || @current_user.Q10_1 == @current_user.Q10_3 || @current_user.Q10_1 == @current_user.Q10_4 || @current_user.Q10_2 == @current_user.Q10_3 || @current_user.Q10_2 == @current_user.Q10_4 || @current_user.Q10_3 == @current_user.Q10_4%>
+                  <div class= "incorrectInfo">
+                      Please correct conflicting rankings
+                      <% $proper = false %>
+                  </div>
+
+                <% end %>
+                <br>
+                <%= f.input :Q10_1, collection: 1...5, label: "a. cooperation by all team members.", as: :select %>
+                <%= f.input :Q10_2, collection: 1...5, label: "b. high-level listening skills.", as: :select %>
+                <%= f.input :Q10_3, collection: 1...5, label: "c. a willingness to ask tough questions.", as: :select %>
+                <%= f.input :Q10_4, collection: 1...5, label: "d. good solid data.", as: :select %>
+                <br>
+
+                <h1>
+                  11. When a new team is forming, I usually:
+                </h1>
+                <% if @current_user.Q11_1 == @current_user.Q11_2 || @current_user.Q11_1 == @current_user.Q11_3 || @current_user.Q11_1 == @current_user.Q11_4 || @current_user.Q11_2 == @current_user.Q11_3 || @current_user.Q11_2 == @current_user.Q11_4 || @current_user.Q11_3 == @current_user.Q11_4%>
+                  <div class= "incorrectInfo">
+                      Please correct conflicting rankings
+                      <% $proper = false %>
+                  </div>
+
+                <% end %>
+                <br>
+                <%= f.input :Q11_1, collection: 1...5, label: "a. try to meet and get to know other team members.", as: :select %>
+                <%= f.input :Q11_2, collection: 1...5, label: "b. ask pointed questions about our goals and methods.", as: :select %>
+                <%= f.input :Q11_3, collection: 1...5, label: "c. want to know what is expected of me.", as: :select %>
+                <%= f.input :Q11_4, collection: 1...5, label: "d. seek clarity about our basic mission.", as: :select %>
+                <br>
+
+                <h1>
+                  12. At times, I make other people feel:
+                </h1>
+                <% if @current_user.Q12_1 == @current_user.Q12_2 || @current_user.Q12_1 == @current_user.Q12_3 || @current_user.Q12_1 == @current_user.Q12_4 || @current_user.Q12_2 == @current_user.Q12_3 || @current_user.Q12_2 == @current_user.Q12_4 || @current_user.Q12_3 == @current_user.Q12_4%>
+                  <div class= "incorrectInfo">
+                      Please correct conflicting rankings
+                      <% $proper = false %>
+                  </div>
+
+                <% end %>
+                <br>
+                <%= f.input :Q12_1, collection: 1...5, label: "a. dishonest because they are not able to be as confrontational as I am.", as: :select %>
+                <%= f.input :Q12_2, collection: 1...5, label: "b. guilty because they don’t live up to my standards.", as: :select %>
+                <%= f.input :Q12_3, collection: 1...5, label: "c. small-minded because they don’t think long-range.", as: :select %>
+                <%= f.input :Q12_4, collection: 1...5, label: "d. heartless because they don’t care about how people relate to each other.", as: :select %>
+                <br>
+
+                <h1>
+                  13. I believe the role of the team leader is to:
+                </h1>
+                <% if @current_user.Q13_1 == @current_user.Q13_2 || @current_user.Q13_1 == @current_user.Q13_3 || @current_user.Q13_1 == @current_user.Q13_4 || @current_user.Q13_2 == @current_user.Q13_3 || @current_user.Q13_2 == @current_user.Q13_4 || @current_user.Q13_3 == @current_user.Q13_4%>
+                  <div class= "incorrectInfo">
+                      Please correct conflicting rankings
+                      <% $proper = false %>
+                  </div>
+
+                <% end %>
+                <br>
+                <%= f.input :Q13_1, collection: 1...5, label: "a. ensure the efficient solution of business problems.", as: :select %>
+                <%= f.input :Q13_2, collection: 1...5, label: "b. help the team establish long-range goals and short-term objectives.", as: :select %>
+                <%= f.input :Q13_3, collection: 1...5, label: "c. create a participatory decision-making climate.", as: :select %>
+                <%= f.input :Q13_4, collection: 1...5, label: "d. bring out diverse ideas and challenge assumptions.", as: :select %>
+                <br>
+
+                <h1>
+                  14. I believe team decisions should be based on:
+                </h1>
+                <% if @current_user.Q14_1 == @current_user.Q14_2 || @current_user.Q14_1 == @current_user.Q14_3 || @current_user.Q14_1 == @current_user.Q14_4 || @current_user.Q14_2 == @current_user.Q14_3 || @current_user.Q14_2 == @current_user.Q14_4 || @current_user.Q14_3 == @current_user.Q14_4%>
+                  <div class= "incorrectInfo">
+                      Please correct conflicting rankings
+                      <% $proper = false %>
+                  </div>
+
+                <% end %>
+                <br>
+                <%= f.input :Q14_1, collection: 1...5, label: "a. the team’s mission and goals.", as: :select %>
+                <%= f.input :Q14_2, collection: 1...5, label: "b. a consensus of team members.", as: :select %>
+                <%= f.input :Q14_3, collection: 1...5, label: "c. an open and candid assessment of the issues.", as: :select %>
+                <%= f.input :Q14_4, collection: 1...5, label: "d. the weight of the evidence.", as: :select %>
+                <br>
+
+                <h1>
+                  15. Sometimes I:
+                </h1>
+                <% if @current_user.Q15_1 == @current_user.Q15_2 || @current_user.Q15_1 == @current_user.Q15_3 || @current_user.Q15_1 == @current_user.Q15_4 || @current_user.Q15_2 == @current_user.Q15_3 || @current_user.Q15_2 == @current_user.Q15_4 || @current_user.Q15_3 == @current_user.Q15_4%>
+                  <div class= "incorrectInfo">
+                      Please correct conflicting rankings
+                      <% $proper = false %>
+                  </div>
+
+                <% end %>
+                <br>
+                <%= f.input :Q15_1, collection: 1...5, label: "a. see team climate as an end in itself.", as: :select %>
+                <%= f.input :Q15_2, collection: 1...5, label: "b. play the devil’s advocate far too long.", as: :select %>
+                <%= f.input :Q15_3, collection: 1...5, label: "c. fail to see the importance of effective team process.", as: :select %>
+                <%= f.input :Q15_4, collection: 1...5, label: "d. overemphasize strategic issues and minimize short-term task accomplishments.", as: :select %>
+                <br>
+
+                <h1>
+                  16. People have often described me as:
+                </h1>
+                <% if @current_user.Q16_1 == @current_user.Q16_2 || @current_user.Q16_1 == @current_user.Q16_3 || @current_user.Q16_1 == @current_user.Q16_4 || @current_user.Q16_2 == @current_user.Q16_3 || @current_user.Q16_2 == @current_user.Q16_4 || @current_user.Q16_3 == @current_user.Q16_4%>
+                  <div class= "incorrectInfo">
+                      Please correct conflicting rankings
+                      <% $proper = false %>
+                  </div>
+
+                <% end %>
+                <br>
+                <%= f.input :Q16_1, collection: 1...5, label: "a. independent.", as: :select %>
+                <%= f.input :Q16_2, collection: 1...5, label: "b. dependable.", as: :select %>
+                <%= f.input :Q16_3, collection: 1...5, label: "c. imaginative.", as: :select %>
+                <%= f.input :Q16_4, collection: 1...5, label: "d. participative.", as: :select %>
+                <br>
+
+                <h1>
+                  17. Most of the time, I am:
+                </h1>
+                <% if @current_user.Q17_1 == @current_user.Q17_2 || @current_user.Q17_1 == @current_user.Q17_3 || @current_user.Q17_1 == @current_user.Q17_4 || @current_user.Q17_2 == @current_user.Q17_3 || @current_user.Q17_2 == @current_user.Q17_4 || @current_user.Q17_3 == @current_user.Q17_4%>
+                  <div class= "incorrectInfo">
+                      Please correct conflicting rankings
+                      <% $proper = false %>
+                  </div>
+
+                <% end %>
+                <br>
+                <%= f.input :Q17_1, collection: 1...5, label: "a. responsible and hardworking.", as: :select %>
+                <%= f.input :Q17_2, collection: 1...5, label: "b. committed and flexible.", as: :select %>
+                <%= f.input :Q17_3, collection: 1...5, label: "c. enthusiastic and humorous.", as: :select %>
+                <%= f.input :Q17_4, collection: 1...5, label: "d. honest and authentic.", as: :select %>
+                <br>
+
+                <h1>
+                  18. In relating to other team members, at times I get annoyed because they don’t:
+                </h1>
+                <% if @current_user.Q18_1 == @current_user.Q18_2 || @current_user.Q18_1 == @current_user.Q18_3 || @current_user.Q18_1 == @current_user.Q18_4 || @current_user.Q18_2 == @current_user.Q18_3 || @current_user.Q18_2 == @current_user.Q18_4 || @current_user.Q18_3 == @current_user.Q18_4%>
+                  <div class= "incorrectInfo">
+                      Please correct conflicting rankings
+                      <% $proper = false %>
+                  </div>
+
+                <% end %>
+                <br>
+                <%= f.input :Q18_1, collection: 1...5, label: "a. revisit team goals or check progress.", as: :select %>
+                <%= f.input :Q18_2, collection: 1...5, label: "b. see the importance of working well together.", as: :select %>
+                <%= f.input :Q18_3, collection: 1...5, label: "c. object to team action with which they disagree.", as: :select %>
+                <%= f.input :Q18_4, collection: 1...5, label: "d. complete their team assignments on time.", as: :select %>
+                <br>
                   <div class="col-sm-offset-5 col-sm-10">
                       <%= f.submit :submit, value: 'Submit', method: :put, :data => {:disable_with => "Elves are Working..."} %>
                   </div>
