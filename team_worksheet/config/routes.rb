@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :teams
   get 'sessions/login'
 
   get 'sessions/home'

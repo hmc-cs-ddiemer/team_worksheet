@@ -10,40 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170405220917) do
-
-  create_table "forms", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string   "Q1"
-    t.string   "Q2"
-    t.string   "Q3"
-    t.string   "Q4"
-    t.string   "Q5"
-    t.string   "Q6"
-    t.string   "Q7"
-    t.string   "Q8"
-    t.string   "Q9"
-    t.string   "Q10"
-    t.string   "Q11"
-    t.string   "Q12"
-    t.string   "Q13"
-    t.string   "Q14"
-    t.string   "Q15"
-    t.string   "Q16"
-    t.string   "Q17"
-    t.string   "Q18"
-    t.string   "userId"
-  end
+ActiveRecord::Schema.define(version: 20170419181402) do
 
   create_table "teams", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "s1"
-    t.string   "s2"
-    t.string   "s3"
-    t.string   "s4"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string   "teamname"
+    t.string   "s1",         default: "",                  null: false
+    t.string   "s2",         default: "",                  null: false
+    t.string   "s3",         default: "",                  null: false
+    t.string   "s4",         default: "",                  null: false
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
+    t.string   "teamname",   default: "Aint no team here", null: false
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -130,6 +106,9 @@ ActiveRecord::Schema.define(version: 20170405220917) do
     t.integer  "Q18_3",              default: 0,                   null: false
     t.integer  "Q18_4",              default: 0,                   null: false
     t.string   "teamname",           default: "Aint no team here", null: false
+    t.integer  "team_id"
+    t.index ["team_id"], name: "index_users_on_team_id", using: :btree
   end
 
+  add_foreign_key "users", "teams"
 end

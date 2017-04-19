@@ -29,7 +29,7 @@ class SessionsController < ApplicationController
   end
   def logout
     session[:user_id] = nil
-    session[:teamname] = nil
+    #session[:teamname] = nil
     redirect_to :action => 'login'
   end
 end
