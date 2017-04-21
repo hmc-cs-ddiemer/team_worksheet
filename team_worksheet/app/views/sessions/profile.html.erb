@@ -8,6 +8,7 @@
     <%= csrf_meta_tags %>
   </head>
   <%= yield %>
+  <div class="banner">
   <body>
 
   <!-- Navigation -->
@@ -54,7 +55,7 @@
   	    <!-- Page Content -->
   	    <div class="container">
 
-  	    	<div class="row">
+  	    	<div class="row", style="color: white;">
             <h1 class='User_Header'> Welcome back: <%=@current_user.username%> </h1>
             <br>
             <h1> Check out yo scores:
@@ -82,4 +83,5 @@
   	    <!-- /.container -->
   	  <style>body{padding-top:70px;}</style>
   	</body>
+    </div
   	</html>

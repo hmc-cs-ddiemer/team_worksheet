@@ -62,6 +62,37 @@
 	background-color: #FF311B;
 }
 
+.banner {
+    background: url('blur.png') center center no-repeat;
+    background-size: cover;
+		min-height: 100%;
+ 		min-width: 1024px;
+
+ /* Set up proportionate scaling */
+ 		width: 100%;
+ 		height: auto;
+
+ /* Set up positioning */
+ 	padding-top: 100px;
+ 		position: fixed;
+ 		top: 0;
+ 		left: 0;
+}
+
+.Sign_Form{
+	color: white;
+	text-align: center;
+	position:fixed;
+  top:50%;
+  left:50%;
+  padding:15px;
+  transform: translate(-50%,-50%);
+}
+
+.loginText {
+	color: black;
+}
+
 .form-control {
     display: block;
     width: 50px;
