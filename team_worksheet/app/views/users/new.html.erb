@@ -8,7 +8,9 @@
   <%= csrf_meta_tags %>
 </head>
 <%= yield %>
+<div class="banner">
 <body>
+
 <!-- Navigation -->
 	    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	        <div class="container">
@@ -20,29 +22,19 @@
                 	 <span class="icon-bar"></span>
                 	 <span class="icon-bar"></span>
                 </button>
-	              <%= link_to "Profile", root_url, class: "navbar-brand" %>
+	              
 	            </div>
 	            <!-- Collect the nav links, forms, and other content for toggling -->
 	            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	                <ul class="nav navbar-nav">
-                    <li>
-                      <%= link_to "Worksheet", sessions_home_url, class: "navbar-brand"%>
-                    </li>
-                    <li>
-                      <%= link_to "Team", profile_url, class: "navbar-brand" %>
-                    </li>
-                    <% if @current_user %>
-                    <li>
-                      <%= link_to "Logout", logout_path, method: :post, data: {confirm: "Are you sure you want to do something like that? Just up and LEAVE?"} %>
-                    </li>
-                    <% else %>
+
                     <li>
                       <%=link_to "Login", sessions_login_url %>
                     </li>
                     <li>
                       <%= link_to "Register", users_new_url %>
                     </li>
-                    <% end %>
+
 	                </ul>
 	            </div>
 	            <!-- /.navbar-collapse -->
@@ -57,11 +49,11 @@
           <div class="Sign_Form">
             <h1>Sign Up</h1>
             <%= form_for(:user, :url => {:controller => 'users', :action => 'create'}) do |f| %>
-            <p> Username:</br> <%= f.text_field :username%> </p>
-            <p> Email:</br> <%= f.text_field :email%> </p>
-            <p> Password:</br> <%= f.password_field :password%></p>
-            <p> Password Confirmation:</br> <%= f.password_field :password_confirmation%> </p>
-            <%= f.submit :Signup %>
+            <p> Username:</br> <div class ="loginText"> <%= f.text_field :username%></div> </p>
+            <p> Email:</br> <div class ="loginText"> <%= f.text_field :email%></div> </p>
+            <p> Password:</br> <div class ="loginText"> <%= f.password_field :password%></div></p>
+            <p> Password Confirmation:</br> <div class ="loginText"> <%= f.password_field :password_confirmation%> </div> </p>
+            <%= f.submit :Signup, class: "btn btn-default" %>
             <% end %>
             <% if @user.errors.any? %>
             <ul class="Signup_Errors">
@@ -81,4 +73,5 @@
     	    <!-- /.container -->
 	  <style>body{padding-top:70px;}</style>
 	</body>
+</div>
 	</html>

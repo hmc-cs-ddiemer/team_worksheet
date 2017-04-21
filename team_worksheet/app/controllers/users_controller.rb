@@ -21,10 +21,10 @@ class UsersController < ApplicationController
       @user.save
       if $proper == true
         puts "***********************************************"
-        redirect_to(:controller => 'sessions', :action => 'profile')
+        redirect_to(:controller => 'sessions', :action => 'home')
       else
         puts "++++++++++++++++++++++++++++++++++++++++++++++++"
-        redirect_to(:controller => 'sessions', :action => 'home')
+        redirect_to(:controller => 'sessions', :action => 'profile')
       end
 
   end

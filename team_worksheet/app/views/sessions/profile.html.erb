@@ -8,7 +8,7 @@
     <%= csrf_meta_tags %>
   </head>
   <%= yield %>
-  <div class="banner">
+  <div class="profileBanner">
   <body>
 
   <!-- Navigation -->
@@ -35,14 +35,14 @@
                       </li>
                       <% if @current_user %>
 	                    <li>
-	                    	<%= link_to "Logout", logout_path, method: :post, data: {confirm: "Are you sure you want to do something like that? Just up and LEAVE?"} %>
+	                    	<%= link_to "Logout", logout_path, method: :post, data: {confirm: "Are you sure you want to do something like that? Just up and LEAVE?"}, class: "navbar-brand", id: "russell-brand" %>
 	                    </li>
 	                    <% else %>
 	                    <li>
-	                    	<%=link_to "Login", sessions_login_url %>
+	                    	<%=link_to "Login", sessions_login_url, class: "navbar-brand" %>
 	                    </li>
 	                    <li>
-	                    	<%= link_to "Register", users_new_url %>
+	                    	<%= link_to "Register", users_new_url, class: "navbar-brand" %>
 	                    </li>
 	                    <% end %>
   	                </ul>
