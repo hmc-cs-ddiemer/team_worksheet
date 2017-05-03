@@ -62,5 +62,5 @@ Our website is fairly simple to operate. First, make a user account with an emai
 5. Submit a pull request
 
 ## Credits:
-Ya boys Team DADD: Dalton Varney, Aman Raghuvanshi, Daniel Lai, Daniel Diemer
+Ya boys, Team DADD: Dalton Varney, Aman Raghuvanshi, Daniel Lai, Daniel Diemer
 
