@@ -8,7 +8,7 @@
     <%= csrf_meta_tags %>
   </head>
   <%= yield %>
-  <div class="profileBanner">
+  <div class="banner">
   <body>
 
   <!-- Navigation -->
@@ -35,14 +35,14 @@
                       </li>
                       <% if @current_user %>
 	                    <li>
-	                    	<%= link_to "Logout", logout_path, method: :post, data: {confirm: "Are you sure you want to do something like that? Just up and LEAVE?"}, class: "navbar-brand", id: "russell-brand" %>
+	                    	<%= link_to "Logout", logout_path, method: :post, data: {confirm: "Are you sure you want to do something like that? Just up and LEAVE?"} %>
 	                    </li>
 	                    <% else %>
 	                    <li>
-	                    	<%=link_to "Login", sessions_login_url, class: "navbar-brand" %>
+	                    	<%=link_to "Login", sessions_login_url %>
 	                    </li>
 	                    <li>
-	                    	<%= link_to "Register", users_new_url, class: "navbar-brand" %>
+	                    	<%= link_to "Register", users_new_url %>
 	                    </li>
 	                    <% end %>
   	                </ul>
@@ -58,14 +58,13 @@
   	    	<div class="row", style="color: white;">
             <h1 class='User_Header'> Welcome back: <%=@current_user.username%> </h1>
             <br>
-            <h1> Check out yo scores:
+            <h1> Here are your scores:
             </h1>
             <% @current_user.C1 = @current_user.Q1_1 + @current_user.Q2_4 + @current_user.Q3_3 + @current_user.Q4_2 + @current_user.Q5_1 + @current_user.Q6_4 + @current_user.Q7_3 + @current_user.Q8_2 + @current_user.Q9_1 + @current_user.Q10_4 + @current_user.Q11_3 + @current_user.Q12_2 + @current_user.Q13_1 + @current_user.Q14_4 + @current_user.Q15_3 + @current_user.Q16_2 + @current_user.Q17_1 + @current_user.Q18_4%>
             <% @current_user.C2 = @current_user.Q1_2 + @current_user.Q2_1 + @current_user.Q3_4 + @current_user.Q4_3 + @current_user.Q5_2 + @current_user.Q6_1 + @current_user.Q7_4 + @current_user.Q8_3 + @current_user.Q9_2 + @current_user.Q10_1 + @current_user.Q11_4 + @current_user.Q12_3 + @current_user.Q13_2 + @current_user.Q14_1 + @current_user.Q15_4 + @current_user.Q16_3 + @current_user.Q17_2 + @current_user.Q18_1%>
             <% @current_user.C3 = @current_user.Q1_3 + @current_user.Q2_2 + @current_user.Q3_1 + @current_user.Q4_4 + @current_user.Q5_3 + @current_user.Q6_2 + @current_user.Q7_1 + @current_user.Q8_4 + @current_user.Q9_3 + @current_user.Q10_2 + @current_user.Q11_1 + @current_user.Q12_4 + @current_user.Q13_3 + @current_user.Q14_2 + @current_user.Q15_1 + @current_user.Q16_4 + @current_user.Q17_3 + @current_user.Q18_2%>
             <% @current_user.C4 = @current_user.Q1_4 + @current_user.Q2_3 + @current_user.Q3_2 + @current_user.Q4_1 + @current_user.Q5_4 + @current_user.Q6_3 + @current_user.Q7_2 + @current_user.Q8_1 + @current_user.Q9_4 + @current_user.Q10_3 + @current_user.Q11_2 + @current_user.Q12_1 + @current_user.Q13_4 + @current_user.Q14_3 + @current_user.Q15_2 + @current_user.Q16_1 + @current_user.Q17_4 + @current_user.Q18_3%>
 
-            <br>
               <br>
               <p> Contributor = <%= @current_user.C1 %> </p>
               <br>
