@@ -1,31 +1,36 @@
-# Project Name
+# team_worksheet
 
-TODO: Write a project description
+Create a web app to simplify the process of filling out the Team Player Questionnaire. 
 
-## Installation
+## Purpose
 
-TODO: Describe the installation process
+The Team-Player Questionnaire will help you identify your style as a team player. The results will lead you to an assessment of your current strengths and provide a basis for a plan to increase your effectiveness as a team player. Teams may use this questionnaire to develop a profile of team strengths and to discuss strategies for increasing team effectiveness.
 
-## Usage
+## Directions
 
-TODO: Write usage instructions
+First, this is a questionnaire, and, therefore, there are no right or wrong responses. Please answer each item according to how you honestly feel you function now as a team member rather than how you used to be or how you would like to be.   You will be asked to complete eighteen sentences. Each sentence has four possible endings. Please rank the endings in the order in which you feel each one applies to you. Place the number 4 next to the ending which is mostapplicable to you and continue down to a 1 next to the ending which is least
+applicable to you.
 
-## Contributing
+## There are four different character scores: Contributor, Collaborator, Communicator, and Challenger.
 
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
+### Contributor: 
+This member gets the team to focus on the immediate task.
 
-## History
+### Collaborator:
+This team player emphasizes the overall purpose of the team.
 
-TODO: Write history
+### Communicator:
+This member encourages positive interpersonal relations and group processes.
 
-## Credits
+### Challenger:
+This style asks the tough questions and pushes the team to take reasonable risks.
 
-TODO: Write credits
+## Instalation:
+TODO
 
-## License
+## Usage:
+TODO
 
-TODO: Write license
+## Credits:
+Ya boys Team DADD: Dalton Varney, Aman Raghuvanshi, Daniel Lai, Daniel Diemer
+
