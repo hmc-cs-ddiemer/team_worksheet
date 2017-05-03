@@ -27,7 +27,7 @@ This member encourages positive interpersonal relations and group processes.
 ### Challenger:
 This style asks the tough questions and pushes the team to take reasonable risks.
 
-## Instalation:
+## Installation:
 TODO
 
 ## Usage:
