@@ -28,10 +28,38 @@ This member encourages positive interpersonal relations and group processes.
 This style asks the tough questions and pushes the team to take reasonable risks.
 
 ## Installation:
-TODO
+
+In order to run our website, you need to install just a few gems, nothing too bad. 
+In addition, you have to have MySQL installed prior to running the website in addition to configuring a database. 
+
+All the necessary files are in the db folder, all you have to do is rake db:migrate to configure the database. 
+
+The gems you need to install are as follows:
+
+Simpleform : 
+https://github.com/plataformatec/simple_form
+
+MySQL2 : 
+https://github.com/brianmario/mysql2
+
+Devise :
+https://github.com/plataformatec/devise
+
+Bcrypt:
+https://github.com/codahale/bcrypt-ruby
+
+Activerecord :
+https://github.com/rails/rails/tree/master/activerecord
 
 ## Usage:
-TODO
+Our website is fairly simple to operate. First, make a user account with an email and username by clicking the registration button at the top of the page. Then login to your account. The first page that opens should be the team worksheet. Fill it out. Then you can check your scores on the profile page!
+
+## Contributing:
+1. Fork it
+2. Create your feature branch: 'git checkout -b [my_new_feature]'
+3. Commit your changes: 'git commit -am 'Added a cool new feature'
+4. Push to the branch: 'git push origin [my_new_feature]'
+5. Submit a pull request
 
 ## Credits:
 Ya boys Team DADD: Dalton Varney, Aman Raghuvanshi, Daniel Lai, Daniel Diemer
