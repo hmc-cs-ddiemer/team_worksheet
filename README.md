@@ -51,6 +51,9 @@ https://github.com/codahale/bcrypt-ruby
 Activerecord :
 https://github.com/rails/rails/tree/master/activerecord
 
+D3js :
+https://github.com/iblue/d3-rails
+
 ## Usage:
 Our website is fairly simple to operate. First, make a user account with an email and username by clicking the registration button at the top of the page. Then login to your account. The first page that opens should be the team worksheet. Fill it out. Then you can check your scores on the profile page!
 
