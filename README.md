@@ -60,7 +60,7 @@ Our website is fairly simple to operate. First, make a user account with an emai
 ### Known Bugs:
 - If a user forgets to fill out one of the response (one of the dropdowns is blank), there will be an Active Record error because it doesn't know what to do with a null input.
 - If a user has conflicting rankings in a question, they are redirected to stay on the worksheet page, however, if they navigate to the home page without fixing the errors their scores will not be valid but will still appear on the profile page.
-- Team page is the same as profile page
+- Team page is the same as profile page (more of an incomplete work thing than a bug, but still wrong)
 
 ## Contributing:
 1. Fork it
