@@ -57,6 +57,11 @@ https://github.com/iblue/d3-rails
 ## Usage:
 Our website is fairly simple to operate. First, make a user account with an email and username by clicking the registration button at the top of the page. Then login to your account. The first page that opens should be the team worksheet. Fill it out. Then you can check your scores on the profile page!
 
+### Known Bugs:
+- If a user forgets to fill out one of the response (one of the dropdowns is blank), there will be an Active Record error because it doesn't know what to do with a null input.
+- If a user has conflicting rankings in a question, they are redirected to stay on the worksheet page, however, if they navigate to the home page without fixing the errors their scores will not be valid but will still appear on the profile page.
+- Team page is the same as profile page
+
 ## Contributing:
 1. Fork it
 2. Create your feature branch: 'git checkout -b [my_new_feature]'
