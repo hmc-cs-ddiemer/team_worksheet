@@ -27,14 +27,28 @@ This member encourages positive interpersonal relations and group processes.
 ### Challenger:
 This style asks the tough questions and pushes the team to take reasonable risks.
 
+
 ## Installation:
+We coded the website in ruby on rails on our macs. Macs are recommended for ruby on rails due to a lack of proper coding resources in windows. Below we have an installation step by step guide to help you. However, keep in mind that when we installed all this, it took some time. Each computer is different so you will probably find bugs or kinks as we found as well, but it is best to search them on google!
 
-In order to run our website, you need to install just a few gems, nothing too bad. 
-In addition, you have to have MySQL installed prior to running the website in addition to configuring a database. 
+1. Follow this guide here to getting ruby: http://guides.rubyonrails.org/getting_started.html
 
-All the necessary files are in the db folder, all you have to do is rake db:migrate to configure the database. 
+2. Once you have installed ruby, you should have bundle install already, but if you don't run the code in your terminal: 
+"gem install bundler"
 
-The gems you need to install are as follows:
+3. Clone the github repo into a folder of your choosing
+
+4. Go into terminal and change your directory to "team_worksheet"
+
+5. Once you are there, run "bundle install" and it should install all the necessary gems for our website
+
+6. Then you can run "rake db:migrate" to update the MySQL(gem should've installed) database to fit our format
+
+7. Type in "rails s" into the terminal and our website should be up and running! Dependent on where you chose to host it, if you are hosting on your local computer the url is most likely: http://localhost:3000/
+
+
+
+The gems we used are as follows just for reference:
 
 Simpleform : 
 https://github.com/plataformatec/simple_form
@@ -51,24 +65,37 @@ https://github.com/codahale/bcrypt-ruby
 Activerecord :
 https://github.com/rails/rails/tree/master/activerecord
 
-D3js :
-https://github.com/iblue/d3-rails
+Bootstrap:
+http://getbootstrap.com
+
+Turbolinks:
+https://github.com/turbolinks/turbolinks
+
 
 ## Usage:
 Our website is fairly simple to operate. First, make a user account with an email and username by clicking the registration button at the top of the page. Then login to your account. The first page that opens should be the team worksheet. Fill it out. Then you can check your scores on the profile page!
+
+## Encryption:
+We used an encryption tool (Bcrypt) to secure passwords and account information. We used an active session method to determine if somebody is logged in, which means that you can't access user information unless you are explicitly logged into that account. 
 
 ### Known Bugs:
 - If a user forgets to fill out one of the response (one of the dropdowns is blank), there will be an Active Record error because it doesn't know what to do with a null input.
 - If a user has conflicting rankings in a question, they are redirected to stay on the worksheet page, however, if they navigate to the home page without fixing the errors their scores will not be valid but will still appear on the profile page.
 - Team page is the same as profile page (more of an incomplete work thing than a bug, but still wrong)
+- Multiple of our team members had "TMP Socket Errors" throughout the development of the website. We never found a consistent solution to this problem, but eventually we all managed to fix it. It seems relatively unrelated to which website you are running, but more about how ruby on rails manages your ports and sockets. There are multiple stack overflow solutions that we have included here:
+http://stackoverflow.com/questions/22436028/cant-connect-to-local-mysql-server-through-socket-tmp-mysql-sock-2
+http://stackoverflow.com/questions/7843731/cant-connect-to-local-mysql-server-through-socket-tmp-mysql-sock-2
 
 ## Contributing:
-1. Fork it
+1. Fork it (copy the repository)
 2. Create your feature branch: 'git checkout -b [my_new_feature]'
 3. Commit your changes: 'git commit -am 'Added a cool new feature'
 4. Push to the branch: 'git push origin [my_new_feature]'
 5. Submit a pull request
 
+## History
+Our history is limited, we developed this and now you see it. We haven't had any intense revisions to note, just consistent development since its conception.
+
 ## Credits:
-Ya boys, Team DADD: Dalton Varney, Aman Raghuvanshi, Daniel Lai, Daniel Diemer
+Team DADD: Dalton Varney, Aman Raghuvanshi, Daniel Lai, Daniel Diemer
 
