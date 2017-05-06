@@ -73,6 +73,8 @@ https://github.com/turbolinks/turbolinks
 
 
 ## Usage:
+(See seed data for accessing the website with a test user)
+
 Our website is fairly simple to operate. First, make a user account with an email and username by clicking the registration button at the top of the page. Then login to your account. The first page that opens should be the team worksheet. Fill it out. Then you can check your scores on the profile page!
 
 ## Encryption:
@@ -95,6 +97,12 @@ http://stackoverflow.com/questions/7843731/cant-connect-to-local-mysql-server-th
 
 ## History
 Our history is limited, we developed this and now you see it. We haven't had any intense revisions to note, just consistent development since its conception.
+
+## Seed Data
+We used rails migrations to create the database with the proper tables. Due to our encrypt gem, Bcrypt, its much harder to make a test user due to the password encryption rules. However, we did it. Once you have run "rake db:migrate" in the installation guide if you run "rake db:seed" and it will generate a test user with the following information:
+username: test
+email: test@test.com
+password: 'password'
 
 ## Credits:
 Team DADD: Dalton Varney, Aman Raghuvanshi, Daniel Lai, Daniel Diemer
